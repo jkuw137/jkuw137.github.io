@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Mechanical Engineer</title>
+<meta name="description" content="Portfolio of Your Name, mechanical engineer with a love for aerospace and hardware.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__mark">✦ Your Name</a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#log">Mission Log</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="nav__cta">Say hello</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <canvas class="hero__sky" id="sky" aria-hidden="true"></canvas>
+  <div class="hero__cloud hero__cloud--one" aria-hidden="true"></div>
+  <div class="hero__cloud hero__cloud--two" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <p class="eyebrow">Mechanical Engineer · Aerospace Enthusiast</p>
+    <h1 class="hero__title">
+      Hi, I'm <span class="hero__name">Your Name.</span><br>
+      I build hardware<br> that likes to fly.
+    </h1>
+    <p class="hero__sub">
+      From motor mounts to full flight stacks — I design, prototype, and test
+      mechanical systems, with a soft spot for anything that leaves the ground.
+    </p>
+    <div class="hero__actions">
+      <a href="#work" class="btn btn--primary">See my work</a>
+      <a href="#" class="btn btn--ghost" id="resumeLink">Download résumé</a>
+    </div>
+  </div>
+
+  <a href="#work" class="hero__scroll" aria-label="Scroll to work">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-star">✦</span>
+  </a>
+</section>
+
+<!-- ================= WORK ================= -->
+<section class="work" id="work">
+  <div class="section-head">
+    <p class="eyebrow eyebrow--dark">Selected Work</p>
+    <h2>Projects I've launched</h2>
+    <p class="section-sub">A few things I've designed, built, and broken along the way. Replace these with your own — patch names and mission codes are just for flavor.</p>
+  </div>
+
+  <div class="project-grid">
+
+    <article class="project-card">
+      <div class="project-card__patch">✦</div>
+      <p class="project-card__code">MISSION 01</p>
+      <h3>Project Name One</h3>
+      <p class="project-card__desc">
+        One or two sentences on what this project is, the problem it solved, and
+        your role in building it. Keep it concrete — what did you actually do?
+      </p>
+      <ul class="project-card__tags">
+        <li>SolidWorks</li>
+        <li>CNC Machining</li>
+        <li>Aluminum 6061</li>
+      </ul>
+      <a href="#" class="project-card__link">View project ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__patch">✦</div>
+      <p class="project-card__code">MISSION 02</p>
+      <h3>Project Name Two</h3>
+      <p class="project-card__desc">
+        One or two sentences on what this project is, the problem it solved, and
+        your role in building it. Keep it concrete — what did you actually do?
+      </p>
+      <ul class="project-card__tags">
+        <li>Fusion 360</li>
+        <li>3D Printing</li>
+        <li>Structural FEA</li>
+      </ul>
+      <a href="#" class="project-card__link">View project ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__patch">✦</div>
+      <p class="project-card__code">MISSION 03</p>
+      <h3>Project Name Three</h3>
+      <p class="project-card__desc">
+        One or two sentences on what this project is, the problem it solved, and
+        your role in building it. Keep it concrete — what did you actually do?
+      </p>
+      <ul class="project-card__tags">
+        <li>Arduino</li>
+        <li>PCB Design</li>
+        <li>Rapid Prototyping</li>
+      </ul>
+      <a href="#" class="project-card__link">View project ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__patch">✦</div>
+      <p class="project-card__code">MISSION 04</p>
+      <h3>Project Name Four</h3>
+      <p class="project-card__desc">
+        One or two sentences on what this project is, the problem it solved, and
+        your role in building it. Keep it concrete — what did you actually do?
+      </p>
+      <ul class="project-card__tags">
+        <li>MATLAB</li>
+        <li>Controls</li>
+        <li>Testing &amp; Validation</li>
+      </ul>
+      <a href="#" class="project-card__link">View project ↗</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="about__grid">
+    <div class="about__text">
+      <p class="eyebrow eyebrow--dark">About</p>
+      <h2>Grounded in mechanics.<br>Reaching for orbit.</h2>
+      <p>
+        Write a short bio here — where you studied, what kind of engineer you are,
+        and what draws you to aerospace and hardware. Two or three sentences is
+        plenty. Let your voice come through; this doesn't need to sound like a
+        résumé.
+      </p>
+      <p>
+        Add a second paragraph if you'd like — what you're working on now, or
+        what kind of roles/projects you're looking for next.
+      </p>
+    </div>
+
+    <div class="about__toolkit">
+      <p class="toolkit__label">Toolkit</p>
+      <div class="toolkit__grid">
+        <div class="toolkit__group">
+          <h4>Design</h4>
+          <p>SolidWorks, Fusion 360, AutoCAD</p>
+        </div>
+        <div class="toolkit__group">
+          <h4>Analysis</h4>
+          <p>ANSYS, MATLAB, FEA / CFD basics</p>
+        </div>
+        <div class="toolkit__group">
+          <h4>Fabrication</h4>
+          <p>CNC milling, 3D printing, welding, sheet metal</p>
+        </div>
+        <div class="toolkit__group">
+          <h4>Electronics</h4>
+          <p>Arduino, basic PCB design, sensors</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MISSION LOG (timeline) ================= -->
+<section class="log" id="log">
+  <div class="section-head">
+    <p class="eyebrow">Mission Log</p>
+    <h2>How I got here</h2>
+    <p class="section-sub">Education and experience, in order. Update the dates and details below.</p>
+  </div>
+
+  <ol class="log__list">
+    <li class="log__entry">
+      <p class="log__date">2026</p>
+      <h3>Role or Milestone Title</h3>
+      <p>Company or School Name</p>
+      <p class="log__detail">One line on what you did or learned here.</p>
+    </li>
+    <li class="log__entry">
+      <p class="log__date">2025</p>
+      <h3>Role or Milestone Title</h3>
+      <p>Company or School Name</p>
+      <p class="log__detail">One line on what you did or learned here.</p>
+    </li>
+    <li class="log__entry">
+      <p class="log__date">2023</p>
+      <h3>Role or Milestone Title</h3>
+      <p>Company or School Name</p>
+      <p class="log__detail">One line on what you did or learned here.</p>
+    </li>
+    <li class="log__entry">
+      <p class="log__date">2021</p>
+      <h3>Started Engineering Degree</h3>
+      <p>University Name</p>
+      <p class="log__detail">One line on how it began.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="contact__sky" aria-hidden="true"></div>
+  <div class="contact__content">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Send a transmission</h2>
+    <p class="contact__sub">Open to new projects, roles, and collaborations. I usually reply within a day or two.</p>
+    <a href="mailto:your.email@example.com" class="contact__email">your.email@example.com</a>
+    <div class="contact__links">
+      <a href="#">LinkedIn ↗</a>
+      <a href="#">GitHub ↗</a>
+      <a href="#">Résumé ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>✦ Built by Your Name, somewhere under the same sky as everyone else.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
