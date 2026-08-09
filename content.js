@@ -32,12 +32,12 @@ const SITE_CONTENT = {
     navCta: "Say hello",
 
     // Hero
-    heroEyebrow: "Mechanical Engineer · Aerospace Enthusiast",
-    heroTitle: `Hi, I'm <span class="hero__name">Joe Kuwano.</span><br>
-      I build hardware<br> that likes to fly.`,
-    heroSub: "From motor mounts to full flight stacks — I design, prototype, and test mechanical systems, with a soft spot for anything that leaves the ground.",
+    heroEyebrow: "Mechanical Engineer",
+    heroTitle: `<span class="hero__name">Joe Kuwano.</span><br>
+      Engineering Portfolio<br>`,
+    heroSub: "I design, prototype, and test mechanical systems, with a soft spot for anything that leaves the ground.",
     btnWork: "See my work",
-    resumeLink: "Download résumé",
+    resumeLink: "Download my CV",
 
     // Work section
     workEyebrow: "Selected Work",
@@ -89,13 +89,13 @@ const SITE_CONTENT = {
     // About
     aboutEyebrow: "About",
     aboutHeading: "Grounded in mechanics.<br>Reaching for orbit.",
-    aboutPara1: "I'm a mechanical engineering student in Auckland with a habit of chasing anything that flies — go-karts, rockets, CubeSats. I like building things with my hands as much as I like modelling them in CAD, and I try to bring the same care to a hand-drawn illustration as I do to a machined part.",
+    aboutPara1: "I am a second-year mechanical engineering student at the University of Auckland with a strong foundation in problem-solving, teamwork, and technical skills with experience in mechanical design, manufacture, electronics and hardware.",
     aboutPara2: "Currently splitting my time between University of Auckland Rocketry and the NZ Undergraduate Space Challenge, while sketching in whatever hours are left over.",
     toolkitLabel: "Toolkit",
     toolkitDesignTitle: "Design",
     toolkitDesignText: "Fusion 360, SolidWorks",
     toolkitAnalysisTitle: "Analysis",
-    toolkitAnalysisText: "OpenRocket, basic FEA",
+    toolkitAnalysisText: "OpenRocket, ANSYS FEA",
     toolkitFabTitle: "Fabrication",
     toolkitFabText: "Laser cutting, 3D printing, composite lay-up",
     toolkitElecTitle: "Electronics",
@@ -107,7 +107,7 @@ const SITE_CONTENT = {
     logSub: "Projects and milestones, in order.",
 
     log1Title: "NZ Undergraduate Space Challenge",
-    log1Org: "Payload Team",
+    log1Org: "Project Team",
     log1Detail: "Designing a payload module for a 3U CubeSat bound for low Earth orbit.",
 
     log2Title: "University of Auckland Rocketry",
@@ -139,7 +139,7 @@ const SITE_CONTENT = {
     resumeLink2: "Résumé ↗",
 
     // Footer
-    footerText: "✦ Built by Joe Kuwano, somewhere under the same sky as everyone else.",
+    footerText: "✦ Built by Joe Kuwano",
   },
 
   ja: {
