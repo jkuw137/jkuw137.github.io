@@ -116,7 +116,7 @@ const SITE_CONTENT = {
 
     log3Title: "Mini-Warman Competition",
     log3Org: "Team Member",
-    log3Detail: "Designed gear trains and arm mechanisms for an autonomous ball-handling robot.",
+    log3Detail: "Designed a chassis, gear trains, and arm mechanisms for an autonomous ball-handling robot.",
 
     log4Title: "Custom Shortcut Controller",
     log4Org: "Personal Project",
