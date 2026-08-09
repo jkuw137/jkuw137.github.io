@@ -33,9 +33,9 @@ const SITE_CONTENT = {
 
     // Hero
     heroEyebrow: "Mechanical Engineer",
-    heroTitle: `<span class="hero__name">Joe Kuwano</span><br>
+    heroTitle: `<span class="hero__name">Joe Kuwano's</span><br>
       Engineering Portfolio<br>`,
-    heroSub: "I design, prototype, and test mechanical systems, with a soft spot for anything that leaves the ground.",
+    heroSub: "I design, prototype, and test mechanical systems, with an interest for anything that leaves the ground.",
     btnWork: "See my work",
     resumeLink: "Download my CV",
 
@@ -132,8 +132,8 @@ const SITE_CONTENT = {
 
     // Contact
     contactEyebrow: "Get in touch",
-    contactHeading: "Send a transmission",
-    contactSub: "Open to new projects, roles, and collaborations. I usually reply within a day or two.",
+    contactHeading: "Send a Message",
+    contactSub: "Open to new projects, roles, and collaborations.",
     linkedinLink: "LinkedIn ↗",
     githubLink: "GitHub ↗",
     resumeLink2: "Résumé ↗",
