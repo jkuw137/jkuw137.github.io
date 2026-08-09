@@ -70,9 +70,9 @@ const SITE_CONTENT = {
     proj5Link: "View project ↗",
 
     // Sketchbook / art
-    artEyebrow: "Illustrations",
-    artHeading: "Sketchbook",
-    artSub: "I draw as much as I build. This is a space for my own hand-drawn illustrations — no AI-generated images here.",
+    artEyebrow: "View Gallery",
+    artHeading: "Illustrations",
+    artSub: "I draw as much as I build. This is a space for my own hand-drawn illustrations made with the help of my Custom Shortcut Controller project.",
     artSlotLabel1: "+ Add your artwork",
     artCaption1: "Illustration title — medium, year",
     artSlotLabel2: "+ Add your artwork",
