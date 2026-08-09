@@ -236,7 +236,9 @@ a{ color: inherit; }
 /* =====================================================================
    Projects
    ===================================================================== */
-.project-list{ display: flex; flex-direction: column; gap: 22px; }
+.project-list{ display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 24px;
+    align-items: start; }
 .project-card{
   background: var(--twilight-2);
   border: 1px solid var(--line-dark);
