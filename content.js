@@ -218,7 +218,7 @@ const SITE_CONTENT = {
     githubUrl: "https://github.com/jkuw137",
     emailLabel: { en: "Email", ja: "メール" },
     // EDIT ME — replace with your real email address
-    email: "your-email@example.com",
+    email: "joe.kuwano@gmail.com",
   },
 
   footer: {

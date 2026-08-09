@@ -26,7 +26,35 @@
       <span class="brand-name">Joe Kuwano</span>
     </a>
 
-    <nav class="primary-nav" id="navInner">
+    <header class="nav" id="nav">
+      <a href="#hero" class="nav__mark">✦ Joe Kuwano</a>
+
+        <nav class="nav__links" id="navInner">
+          <a href="#about" data-nav="about"></a>
+          <a href="#projects" data-nav="projects"></a>
+          <a href="#gallery" data-nav="gallery"></a>
+          <a href="#contact" data-nav="contact"></a>
+        </nav>
+
+        <div class="nav__right">
+          <div class="lang-toggle">
+            <button id="btnEn">EN</button>
+            <button id="btnJa">日本語</button>
+          </div>
+
+          <button
+            class="nav__toggle"
+            id="navToggleBtn"
+            aria-expanded="false"
+            aria-label="Toggle menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+      <!--
       <a href="#about" data-nav="about"></a>
       <a href="#projects" data-nav="projects"></a>
       <a href="#gallery" data-nav="gallery"></a>
@@ -35,7 +63,7 @@
         <button id="btnEn" type="button">EN</button>
         <button id="btnJa" type="button">日本語</button>
       </div>
-    </nav>
+    </nav> --> 
 
     <button class="nav-toggle-btn" id="navToggleBtn" aria-label="Toggle menu" aria-expanded="false">
       <svg width="20" height="20" viewBox="0 0 20 20"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
