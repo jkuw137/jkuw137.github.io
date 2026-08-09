@@ -191,9 +191,9 @@ const SITE_CONTENT = {
       proj5Link: "プロジェクトを見る ↗",
     
       // Sketchbook / art
-      artEyebrow: "イラスト",
-      artHeading: "スケッチブック",
-      artSub: "ものをつくるのと同じくらい、絵を描くことも好きです。ここでは、自分の手で描いたイラストを紹介しています。AI生成画像は使用していません。",
+      artEyebrow: "ギャラリーを見る",
+      artHeading: "イラスト",
+      artSub: "作るのと同じくらい、絵を描くことも好きです。ここでは、自作のショートカットコントローラープロジェクトを活用して制作した、手描きのイラストを紹介しています。",
       artSlotLabel1: "+ 作品を追加",
       artCaption1: "作品タイトル — 使用画材・制作年",
       artSlotLabel2: "+ 作品を追加",
