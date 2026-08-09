@@ -33,7 +33,7 @@ const SITE_CONTENT = {
 
     // Hero
     heroEyebrow: "Mechanical Engineer",
-    heroTitle: `<span class="hero__name">Joe Kuwano.</span><br>
+    heroTitle: `<span class="hero__name">Joe Kuwano</span><br>
       Engineering Portfolio<br>`,
     heroSub: "I design, prototype, and test mechanical systems, with a soft spot for anything that leaves the ground.",
     btnWork: "See my work",
