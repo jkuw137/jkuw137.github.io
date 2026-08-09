@@ -450,6 +450,7 @@ html[lang="ja"] .lang-toggle { font-family: "Noto Sans JP", var(--mono); }
 }
 
 /* ============ MISSION LOG ============ */
+/*
 .log { padding: 120px 24px; max-width: 760px; margin: 0 auto; }
 .log__list { position: relative; }
 .log__list::before {
@@ -485,6 +486,7 @@ html[lang="ja"] .lang-toggle { font-family: "Noto Sans JP", var(--mono); }
 .log__entry h3 { font-size: 1.15rem; margin-bottom: 4px; }
 .log__entry > p:nth-of-type(1) { color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 8px; }
 .log__detail { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
+*/
 
 /* ============ CONTACT ============ */
 .contact {
