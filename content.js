@@ -142,123 +142,126 @@ const SITE_CONTENT = {
     footerText: "✦ Built by Joe Kuwano",
   },
 
-  ja: {
-    // Nav
-    navWork: "実績",
-    navArt: "スケッチブック",
-    navAbout: "プロフィール",
-    navLog: "ミッションログ",
-    navContact: "お問い合わせ",
-    langToggle: "English",
-    navCta: "連絡する",
-
-    // Hero
-    heroEyebrow: "機械工学専攻 · 航空宇宙が好きです",
-    heroTitle: `はじめまして、<span class="hero__name">Joe Kuwano</span>です。<br>
-      空へ向かう<br>ハードウェアをつくっています。`,
-    heroSub: "モーターマウントから統合フライトシステムまで—機械システムの設計・試作・試験を行っています。地上を離れるものには、特別な思い入れがあります。",
-    btnWork: "実績を見る",
-    resumeLink: "履歴書をダウンロード",
-
-    // Work section
-    workEyebrow: "主な実績",
-    workHeading: "取り組んできたプロジェクト",
-    workSub: "学生コンペティションチームから大学の研究グループまで、これまでに設計・製作・試験してきたプロジェクトの一部です。",
-
-    proj1Code: "2026年1月 – 2026年5月",
-    proj1Title: "カスタムショートカットコントローラー",
-    proj1Desc: "デジタルアートの制作を効率化し、手への負担を減らすため、ESP32を用いたカスタムHIDデバイスを試作しました。ファームウェアと人間工学に基づいた筐体はすべて自作です。",
-    proj1Link: "プロジェクトを見る ↗",
-
-    proj2Code: "2024年3月 – 2024年11月",
-    proj2Title: "電動ゴーカート — カーボンコンポジットシャシー",
-    proj2Desc: "EVolocityコンペティション出場車両のフルカーボンファイバーシャシーの設計・製作に携わりました。ウェットレイアップ、真空バッギング、型製作を経験し、80kg以上のドライバー荷重に耐える軽量かつ堅牢なフレームを完成させました。",
-    proj2Link: "プロジェクトを見る ↗",
-
-    proj3Code: "2026年3月 – 2026年6月",
-    proj3Title: "Mini-Warman競技会",
-    proj3Desc: "テニスボールを収集・運搬・排出する自律システムをチームで開発しました。トルクと制御性を高めるためのギアトレインとアーム機構を設計し、確実な組み立てを実現するためDesign for Production(DfP)の原則を適用しました。",
-    proj3Link: "プロジェクトを見る ↗",
-
-    proj4Code: "2026年3月 – 現在",
-    proj4Title: "オークランド大学ロケットリー部",
-    proj4Desc: "オークランド大学ロケットリー部のメンバーとして、ロケットの共同設計・製作に取り組んでいます。シミュレーションソフトウェアを用いて圧力中心と重心をモデル化し、飛行性能を予測しています。",
-    proj4Link: "プロジェクトを見る ↗",
-
-    proj5Code: "2026年7月 – 現在",
-    proj5Title: "NZ Undergraduate Space Challenge",
-    proj5Desc: "低軌道(LEO)へ打ち上げられる3U CubeSatに搭載するペイロードモジュールの設計に、多分野混成チームの一員として取り組んでいます。分野を超えて連携し、実際のミッション制約に対する解決策を模索しています。",
-    proj5Link: "プロジェクトを見る ↗",
-
-    // Sketchbook / art
-    artEyebrow: "イラスト",
-    artHeading: "スケッチブック",
-    artSub: "ものづくりと同じくらい、絵を描くことも好きです。ここに並ぶのはすべて自分の手で描いたイラストで、AI生成画像は使用していません。",
-    artSlotLabel1: "+ 作品を追加",
-    artCaption1: "作品タイトル — 画材、制作年",
-    artSlotLabel2: "+ 作品を追加",
-    artCaption2: "作品タイトル — 画材、制作年",
-    artSlotLabel3: "+ 作品を追加",
-    artCaption3: "作品タイトル — 画材、制作年",
-    artSlotLabel4: "+ 作品を追加",
-    artCaption4: "作品タイトル — 画材、制作年",
-    artSlotLabel5: "+ 作品を追加",
-    artCaption5: "作品タイトル — 画材、制作年",
-    artSlotLabel6: "+ 作品を追加",
-    artCaption6: "作品タイトル — 画材、制作年",
-
-    // About
-    aboutEyebrow: "プロフィール",
-    aboutHeading: "機構工学に軸足を置き、<br>軌道を目指す。",
-    aboutPara1: "オークランドで機械工学を学ぶ学生で、飛ぶものならなんでも追いかけてしまう性分です—ゴーカート、ロケット、CubeSatまで。CADでモデリングするのと同じくらい、自分の手で何かをつくることが好きで、機械部品をつくるときと同じ丁寧さを、手描きのイラストにも注いでいます。",
-    aboutPara2: "現在はUniversity of Auckland RocketryとNZ Undergraduate Space Challengeの両方に取り組みながら、残った時間でスケッチを描いています。",
-    toolkitLabel: "使用ツール",
-    toolkitDesignTitle: "設計",
-    toolkitDesignText: "Fusion 360, SolidWorks",
-    toolkitAnalysisTitle: "解析",
-    toolkitAnalysisText: "OpenRocket, 基礎的なFEA",
-    toolkitFabTitle: "製作",
-    toolkitFabText: "レーザーカット、3Dプリント、複合材レイアップ",
-    toolkitElecTitle: "電子工作",
-    toolkitElecText: "Arduino, ESP32, はんだ付け",
-
-    // Mission log
-    logEyebrow: "ミッションログ",
-    logHeading: "これまでの歩み",
-    logSub: "プロジェクトとマイルストーンを時系列で紹介します。",
-
-    log1Title: "NZ Undergraduate Space Challenge",
-    log1Org: "ペイロードチーム",
-    log1Detail: "低軌道へ打ち上げられる3U CubeSat用のペイロードモジュールを設計しています。",
-
-    log2Title: "オークランド大学ロケットリー部",
-    log2Org: "部員",
-    log2Detail: "ロケットの飛行性能をシミュレーションし、設計・製作に貢献しています。",
-
-    log3Title: "Mini-Warman競技会",
-    log3Org: "チームメンバー",
-    log3Detail: "ボールを扱う自律ロボットのギアトレインとアーム機構を設計しました。",
-
-    log4Title: "カスタムショートカットコントローラー",
-    log4Org: "個人プロジェクト",
-    log4Detail: "デジタルアート制作を効率化する、プログラム可能なマクロ機能付きのESP32 HIDを設計しました。",
-
-    log5Title: "電動ゴーカート — カーボンコンポジットシャシー",
-    log5Org: "EVolocityチーム",
-    log5Detail: "80kg以上のドライバー荷重に対応するフルカーボンファイバーシャシーの製作に携わりました。",
-
-    log6Title: "工学部に入学",
-    log6Org: "オークランド大学",
-    log6Detail: "入学年やその他の情報をここに追加してください。",
-
-    // Contact
-    contactEyebrow: "お問い合わせ",
-    contactHeading: "メッセージを送る",
-    contactSub: "新しいプロジェクトやお仕事のご相談、コラボレーションを歓迎します。通常1〜2日以内に返信いたします。",
-    linkedinLink: "LinkedIn ↗",
-    githubLink: "GitHub ↗",
-    resumeLink2: "履歴書 ↗",
-
+    ja: {
+      // Nav
+      navWork: "作品",
+      navArt: "スケッチブック",
+      navAbout: "プロフィール",
+      navLog: "活動記録",
+      navContact: "お問い合わせ",
+      langToggle: "English",
+      navCta: "お気軽にどうぞ",
+    
+      // Hero
+      heroEyebrow: "機械工学専攻",
+      heroTitle: `<span class="hero__name">Joe Kuwano's</span><br>
+        Engineering Portfolio<br>`,
+      heroSub: "機械システムの設計・試作・検証に取り組んでいます。特に、地上を離れるものに興味があります。",
+      btnWork: "作品を見る",
+      resumeLink: "CVをダウンロード",
+    
+      // Work section
+      workEyebrow: "主なプロジェクト",
+      workHeading: "プロジェクト：",
+      workSub: "学生競技チームから大学のプロジェクトまで、これまでに設計・製作・検証してきたものを紹介します。",
+    
+      proj1Code: "2026年1月 – 2026年5月",
+      proj1Title: "カスタム・ショートカットコントローラー",
+      proj1Desc: "デジタルアートの作業効率向上と手への負担軽減を目的に、ESP32ベースのカスタムHIDコントローラーを試作。独自ファームウェアと人間工学に基づいた筐体を設計しました。",
+      proj1Link: "プロジェクトを見る ↗",
+    
+      proj2Code: "2024年3月 – 2024年11月",
+      proj2Title: "電動ゴーカート — コンポジットシャシー",
+      proj2Desc: "EVolocity競技会に向けた、フルカーボンファイバー製シャシーの設計・製作に携わりました。ウェットレイアップ、真空バッグ成形、金型製作を行い、80kgを超えるドライバーの荷重に耐えられる構造を実現しました。",
+      proj2Link: "プロジェクトを見る ↗",
+    
+      proj3Code: "2026年3月 – 2026年6月",
+      proj3Title: "Mini-Warman Competition",
+      proj3Desc: "テニスボールを回収・運搬・投入する自律システムの開発にチームで取り組みました。トルクと制御を考慮したギヤトレインやアーム機構を設計し、信頼性の高い組立を実現するためDesign-for-Productionの考え方を取り入れました。",
+      proj3Link: "プロジェクトを見る ↗",
+    
+      proj4Code: "2026年3月 – 現在",
+      proj4Title: "University of Auckland Rocketry",
+      proj4Desc: "University of Auckland Rocketryのメンバーとして、ロケットの設計・製作に取り組んでいます。シミュレーションソフトウェアを用いて、圧力中心と重心を解析し、飛行性能を予測しています。",
+      proj4Link: "プロジェクトを見る ↗",
+    
+      proj5Code: "2026年7月 – 現在",
+      proj5Title: "NZ Undergraduate Space Challenge",
+      proj5Desc: "3U CubeSatに搭載され、低軌道（LEO）へ打ち上げられるペイロードモジュールを設計する学際的なチームの一員として活動しています。異なる分野のメンバーと協力し、実際のミッションにおける制約や課題に取り組んでいます。",
+      proj5Link: "プロジェクトを見る ↗",
+    
+      // Sketchbook / art
+      artEyebrow: "イラスト",
+      artHeading: "スケッチブック",
+      artSub: "ものをつくるのと同じくらい、絵を描くことも好きです。ここでは、自分の手で描いたイラストを紹介しています。AI生成画像は使用していません。",
+      artSlotLabel1: "+ 作品を追加",
+      artCaption1: "作品タイトル — 使用画材・制作年",
+      artSlotLabel2: "+ 作品を追加",
+      artCaption2: "作品タイトル — 使用画材・制作年",
+      artSlotLabel3: "+ 作品を追加",
+      artCaption3: "作品タイトル — 使用画材・制作年",
+      artSlotLabel4: "+ 作品を追加",
+      artCaption4: "作品タイトル — 使用画材・制作年",
+      artSlotLabel5: "+ 作品を追加",
+      artCaption5: "作品タイトル — 使用画材・制作年",
+      artSlotLabel6: "+ 作品を追加",
+      artCaption6: "作品タイトル — 使用画材・制作年",
+    
+      // About
+      aboutEyebrow: "プロフィール",
+      aboutHeading: "力学を基礎に。<br>軌道を目指して。",
+      aboutPara1: "University of Aucklandで機械工学を専攻する2年生です。問題解決力、チームワーク、技術力を基盤に、機械設計・製作、電子工学、ハードウェアなどの分野で経験を積んでいます。",
+      aboutPara2: "現在はUniversity of Auckland RocketryとNZ Undergraduate Space Challengeの活動に取り組みながら、残った時間にはスケッチを楽しんでいます。",
+      toolkitLabel: "使用ツール・技術",
+      toolkitDesignTitle: "設計",
+      toolkitDesignText: "Fusion 360、SolidWorks",
+      toolkitAnalysisTitle: "解析",
+      toolkitAnalysisText: "OpenRocket、ANSYS FEA",
+      toolkitFabTitle: "製作",
+      toolkitFabText: "レーザー加工、3Dプリント、コンポジット成形",
+      toolkitElecTitle: "電子工作",
+      toolkitElecText: "Arduino、ESP32、はんだ付け",
+    
+      // Mission log
+      logEyebrow: "活動記録",
+      logHeading: "これまでの歩み",
+      logSub: "これまでのプロジェクトと活動を時系列で紹介します。",
+    
+      log1Title: "NZ Undergraduate Space Challenge",
+      log1Org: "プロジェクトチーム",
+      log1Detail: "低軌道へ向かう3U CubeSatに搭載するペイロードモジュールを設計。",
+    
+      log2Title: "University of Auckland Rocketry",
+      log2Org: "クラブメンバー",
+      log2Detail: "ロケットの飛行性能をシミュレーションし、設計・製作に携わっています。",
+    
+      log3Title: "Mini-Warman Competition",
+      log3Org: "チームメンバー",
+      log3Detail: "自律型ボールハンドリングロボットのシャシー、ギヤトレイン、アーム機構を設計。",
+    
+      log4Title: "カスタム・ショートカットコントローラー",
+      log4Org: "個人プロジェクト",
+      log4Detail: "デジタルアートの作業効率向上を目的に、プログラム可能なマクロ機能を備えたESP32ベースのHIDを設計。",
+    
+      log5Title: "電動ゴーカート — コンポジットシャシー",
+      log5Org: "EVolocity Team",
+      log5Detail: "80kgを超えるドライバーの荷重に対応するフルカーボンファイバー製シャシーの製作に携わりました。",
+    
+      log6Title: "工学部入学",
+      log6Org: "University of Auckland",
+      log6Detail: "入学年や、記載したいその他の情報を追加してください。",
+    
+      // Contact
+      contactEyebrow: "お問い合わせ",
+      contactHeading: "メッセージを送る",
+      contactSub: "新しいプロジェクト、インターンシップ・仕事、コラボレーションなどのお誘いを歓迎しています。",
+      linkedinLink: "LinkedIn ↗",
+      githubLink: "GitHub ↗",
+      resumeLink2: "履歴書 ↗",
+    
+      // Footer
+      footerText: "✦ Joe Kuwano 制作",
+    
     // Footer
     footerText: "✦ Joe Kuwanoが、みんなと同じ空の下でつくりました。",
   },
