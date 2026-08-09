@@ -23,7 +23,7 @@
 const SITE_CONTENT = {
   en: {
     // Nav
-    navWork: "Work",
+    navWork: "Projects",
     navArt: "Sketchbook",
     navAbout: "About",
     navLog: "Mission Log",
