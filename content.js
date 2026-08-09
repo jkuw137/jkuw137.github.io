@@ -51,22 +51,22 @@ const SITE_CONTENT = {
 
     proj2Code: "MAR 2024 – NOV 2024",
     proj2Title: "Electric Go-Kart — Composite Chassis",
-    proj2Desc: "Helped design and manufacture a full carbon-fiber chassis for an EVolocity competition entry — wet lay-up, vacuum bagging, and mould fabrication, built to carry a full 80kg+ driver load.",
+    proj2Desc: "Helped design and manufacture a full carbon-fiber chassis for an EVolocity competition entry. Gained experience in composite manufacturing proceedures such as lay-up, lamination, vacuum bagging, and mould fabrication, built to carry a full 80kg+ driver load.",
     proj2Link: "View project ↗",
 
     proj3Code: "MAR 2026 – JUN 2026",
     proj3Title: "Mini-Warman Competition",
-    proj3Desc: "Collaborated on an autonomous system to collect, transport, and deposit tennis balls — designing gear trains and arm mechanisms for torque and control, applying Design-for-Production principles for reliable assembly.",
+    proj3Desc: "Collaborated on an autonomous system to collect, transport, and deposit tennis balls, designing gear trains and arm mechanisms for torque and control, applying Design-for-Production principles for reliable assembly.",
     proj3Link: "View project ↗",
 
     proj4Code: "MAR 2026 – PRESENT",
     proj4Title: "University of Auckland Rocketry",
-    proj4Desc: "Member of the University of Auckland Rocketry club, working on collaborative rocket design and manufacture — using simulation software to model centre of pressure and gravity and predict flight performance.",
+    proj4Desc: "Member of the University of Auckland Rocketry club, working on collaborative rocket design and manufacture. Involved using simulation software to model centre of pressure and gravity and predict flight performance.",
     proj4Link: "View project ↗",
 
     proj5Code: "JUL 2026 – PRESENT",
     proj5Title: "NZ Undergraduate Space Challenge",
-    proj5Desc: "Part of a multidisciplinary team designing a payload module for integration into a 3U CubeSat headed to Low Earth Orbit — working across disciplines to solve real mission constraints.",
+    proj5Desc: "Part of a multidisciplinary team designing a payload module for integration into a 3U CubeSat headed to Low Earth Orbit, working across disciplines to solve real mission constraints.",
     proj5Link: "View project ↗",
 
     // Sketchbook / art
