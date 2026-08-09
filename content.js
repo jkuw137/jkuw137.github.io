@@ -35,7 +35,7 @@ const SITE_CONTENT = {
     heroEyebrow: "Mechanical Engineer",
     heroTitle: `<span class="hero__name">Joe Kuwano's</span><br>
       Engineering Portfolio<br>`,
-    heroSub: "I design, prototype, and test mechanical systems, with an interest for anything that leaves the ground.",
+    heroSub: "I design, prototype, and test mechanical systems, with an interest for controls, dynamics and mechanics of materials.",
     btnWork: "See my work",
     resumeLink: "Download my CV",
 
@@ -156,7 +156,7 @@ const SITE_CONTENT = {
       heroEyebrow: "機械工学専攻",
       heroTitle: `<span class="hero__name">Joe Kuwano's</span><br>
         Engineering Portfolio<br>`,
-      heroSub: "機械システムの設計・試作・検証に取り組んでいます。特に、地上を離れるものに興味があります。",
+      heroSub: "機械システムの設計・試作・検証に取り組んでいます。特に、制御、ダイナミクス、材料力学に関心があります。",
       btnWork: "作品を見る",
       resumeLink: "CVをダウンロード",
     
