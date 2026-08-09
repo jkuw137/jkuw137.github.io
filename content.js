@@ -136,7 +136,7 @@ const SITE_CONTENT = {
     contactSub: "Open to new projects, roles, and collaborations.",
     linkedinLink: "LinkedIn ↗",
     githubLink: "GitHub ↗",
-    resumeLink2: "Résumé ↗",
+    resumeLink2: "CV ↗",
 
     // Footer
     footerText: "✦ Built by Joe Kuwano",
