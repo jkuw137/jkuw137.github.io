@@ -213,6 +213,7 @@
               src="assets/art/ocean.png" 
               alt="Digital art produced with the help of my ESP-32 Controller"
               onclick="openLightbox(this)"
+              draggable="false"
             >
             <figcaption>Port Town, 2026</figcaption>
           </figure>
@@ -368,19 +369,27 @@
 <script src="script.js"></script>
   
 <script>
-    function openLightbox(img) {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-    
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-    
-      lightbox.classList.add("active");
+  function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+  
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+  
+    lightbox.classList.add("active");
+  }
+  
+  function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+  }
+  
+  // Prevent right-click on artwork
+  document.addEventListener("contextmenu", function(e) {
+    if (e.target.closest(".art-piece, .lightbox")) {
+      e.preventDefault();
     }
-    
-    function closeLightbox() {
-      document.getElementById("lightbox").classList.remove("active");
-    }
-    </script>
+  });
+</script>
+  
 </body>
 </html>
