@@ -1,195 +1,357 @@
 <!DOCTYPE html>
-<html lang="en" id="html-root">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Joe Kuwano — Engineering Portfolio</title>
-<meta name="description" content="Engineering portfolio of Joe Kuwano — mechanical design, embedded electronics, rocketry and illustration." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%231E2F5C'/%3E%3Cpath d='M16 6c3 4 3 16 0 20-3-4-3-16 0-20z' fill='%238FC1E8'/%3E%3C/svg%3E">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joe Kuwano — Mechanical Engineer</title>
+<meta name="description" content="Portfolio of Joe Kuwano, mechanical engineer and digital artist with a love for aerospace and hardware.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Murecho:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1130'/%3E%3Cpath d='M16 5 L18.3 13.7 27 16 18.3 18.3 16 27 13.7 18.3 5 16 13.7 13.7 Z' fill='%23FFD37A'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="topbar">
-  <div class="wrap topbar-inner">
-    <a href="#top" class="brand">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="30" height="30">
-          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 4"/>
-          <path d="M20 9c4 4.5 4 17.5 0 22-4-4.5-4-17.5 0-22z" fill="currentColor"/>
-          <circle cx="20" cy="15" r="1.6" fill="var(--twilight)"/>
-        </svg>
-      </span>
-      <span class="brand-name">Joe Kuwano</span>
-    </a>
+<!--
+  ✦ EDITING THIS SITE
+  Every piece of text on this page (English + Japanese) lives in ONE file:
+  content.js. Open that file to change wording, add projects to the copy,
+  or fix a translation — you shouldn't need to touch this HTML for text
+  changes. The ids you see on elements below (e.g. id="heroTitle") are just
+  hooks that content.js uses to fill in the right words.
+  See README.md for adding artwork, thumbnails, and a résumé.
+-->
 
-    <header class="nav" id="nav">
-      <a href="#hero" class="nav__mark">✦ Joe Kuwano</a>
-
-        <nav class="nav__links" id="navInner">
-          <a href="#about" data-nav="about"></a>
-          <a href="#projects" data-nav="projects"></a>
-          <a href="#gallery" data-nav="gallery"></a>
-          <a href="#contact" data-nav="contact"></a>
-        </nav>
-
-        <div class="nav__right">
-          <div class="lang-toggle">
-            <button id="btnEn">EN</button>
-            <button id="btnJa">日本語</button>
-          </div>
-
-          <button
-            class="nav__toggle"
-            id="navToggleBtn"
-            aria-expanded="false"
-            aria-label="Toggle menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </header>
-      <!--
-      <a href="#about" data-nav="about"></a>
-      <a href="#projects" data-nav="projects"></a>
-      <a href="#gallery" data-nav="gallery"></a>
-      <a href="#contact" data-nav="contact"></a>
-      <div class="lang-toggle" role="group" aria-label="Language">
-        <button id="btnEn" type="button">EN</button>
-        <button id="btnJa" type="button">日本語</button>
-      </div>
-    </nav> --> 
-
-    <button class="nav-toggle-btn" id="navToggleBtn" aria-label="Toggle menu" aria-expanded="false">
-      <svg width="20" height="20" viewBox="0 0 20 20"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__mark">✦ Joe Kuwano</a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#work" id="navWork">Work</a>
+    <a href="#art" id="navArt">Sketchbook</a>
+    <a href="#about" id="navAbout">About</a>
+    <a href="#log" id="navLog">Mission Log</a>
+    <a href="#contact" id="navContact">Contact</a>
+  </nav>
+  <div class="nav__right">
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">日本語</button>
+    <a href="#contact" class="nav__cta" id="navCta">Say hello</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <!--
+    OPTIONAL: CUSTOM BACKGROUND BANNER
+    Want a hand-drawn or painted sky instead of the plain gradient + stars?
+    1. Put your image in assets/img/ (e.g. assets/img/hero-banner.jpg).
+    2. Uncomment the line below and set the src.
+    It sits behind the stars and clouds automatically — no other changes needed.
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <!-- decorative twilight sky and stars, injected by script.js -->
-    <div class="sky-layer" id="skyLayer" aria-hidden="true"></div>
+    <img class="hero__banner" src="assets/img/hero-banner.jpg" alt="" aria-hidden="true">
+  -->
+  <canvas class="hero__sky" id="sky" aria-hidden="true"></canvas>
+  <div class="hero__cloud hero__cloud--one" aria-hidden="true"></div>
+  <div class="hero__cloud hero__cloud--two" aria-hidden="true"></div>
 
-    <div class="wrap hero-inner">
-      <p class="eyebrow" id="heroEyebrow"></p>
-      <h1 class="hero-title">
-        <span id="heroName">Joe Kuwano</span>
-      </h1>
-      <p class="tagline" id="heroTagline"></p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary" id="heroCtaProjects"></a>
-        <a href="#gallery" class="btn btn-ghost" id="heroCtaGallery"></a>
-      </div>
+  <div class="hero__content">
+    <p class="eyebrow" id="heroEyebrow">Mechanical Engineer · Aerospace Enthusiast</p>
+    <h1 class="hero__title" id="heroTitle">
+      Hi, I'm <span class="hero__name">Joe Kuwano.</span><br>
+      I build hardware<br> that likes to fly.
+    </h1>
+    <p class="hero__sub" id="heroSub">
+      From motor mounts to full flight stacks — I design, prototype, and test
+      mechanical systems, with a soft spot for anything that leaves the ground.
+    </p>
+    <div class="hero__actions">
+      <a href="#work" class="btn btn--primary" id="btnWork">See my work</a>
+      <!-- TODO: drop your résumé PDF into assets/resume/ and update the href below -->
+      <a href="assets/resume/joe-kuwano-resume.pdf" class="btn btn--ghost" id="resumeLink" download>Download résumé</a>
+    </div>
+  </div>
+
+  <a href="#work" class="hero__scroll" aria-label="Scroll to work">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-star">✦</span>
+  </a>
+</section>
+
+<!-- ================= WORK ================= -->
+<section class="work" id="work">
+  <div class="section-head">
+    <p class="eyebrow eyebrow--dark" id="workEyebrow">Selected Work</p>
+    <h2 id="workHeading">Projects I've launched</h2>
+    <p class="section-sub" id="workSub">A few things I've designed, built, and tested — from student competition teams to university research groups.</p>
+  </div>
+
+  <!--
+    OPTIONAL: PROJECT THUMBNAILS
+    Each card shows a small ✦ patch by default. To use a photo or render instead:
+      <div class="project-card__thumb"><img src="assets/img/proj1-thumb.jpg" alt="Describe the project"></div>
+    Add it as the first child inside the <article class="project-card">, right
+    before (or instead of) the ✦ patch div. Put image files in assets/img/.
+  -->
+  <div class="project-grid">
+
+    <article class="project-card">
+      <div class="project-card__patch">✦</div>
+      <p class="project-card__code" id="proj1Code">JAN 2026 – MAY 2026</p>
+      <h3 id="proj1Title">Custom Shortcut Controller</h3>
+      <p class="project-card__desc" id="proj1Desc">
+        Prototyped a custom ESP32-based HID to speed up digital art workflows and
+        reduce hand strain, with fully custom firmware and an ergonomic enclosure.
+      </p>
+      <ul class="project-card__tags">
+        <li>ESP32</li>
+        <li>Arduino IDE</li>
+        <li>3D Printing</li>
+        <li>Electronics</li>
+      </ul>
+      <a href="https://github.com/jkuw137/Custom-ESP-32-HID-Device" target="_blank" rel="noopener" class="project-card__link" id="proj1Link">View project ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__patch">✦</div>
+      <p class="project-card__code" id="proj2Code">MAR 2024 – NOV 2024</p>
+      <h3 id="proj2Title">Electric Go-Kart — Composite Chassis</h3>
+      <p class="project-card__desc" id="proj2Desc">
+        Helped design and manufacture a full carbon-fiber chassis for an EVolocity
+        competition entry — wet lay-up, vacuum bagging, and mould fabrication,
+        built to carry a full 80kg+ driver load.
+      </p>
+      <ul class="project-card__tags">
+        <li>Fusion</li>
+        <li>Laser Cutting</li>
+        <li>Composite Manufacturing</li>
+      </ul>
+      <!-- No specific repo for this one — pointing to GitHub profile. Swap in a real link if you have one. -->
+      <a href="https://github.com/jkuw137" target="_blank" rel="noopener" class="project-card__link" id="proj2Link">View project ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__patch">✦</div>
+      <p class="project-card__code" id="proj3Code">MAR 2026 – JUN 2026</p>
+      <h3 id="proj3Title">Mini-Warman Competition</h3>
+      <p class="project-card__desc" id="proj3Desc">
+        Collaborated on an autonomous system to collect, transport, and deposit
+        tennis balls — designing gear trains and arm mechanisms for torque and
+        control, applying Design-for-Production principles for reliable assembly.
+      </p>
+      <ul class="project-card__tags">
+        <li>Fusion</li>
+        <li>Arduino</li>
+        <li>3D Printing</li>
+        <li>Laser Cutting</li>
+      </ul>
+      <a href="https://github.com/jkuw137" target="_blank" rel="noopener" class="project-card__link" id="proj3Link">View project ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__patch">✦</div>
+      <p class="project-card__code" id="proj4Code">MAR 2026 – PRESENT</p>
+      <h3 id="proj4Title">University of Auckland Rocketry</h3>
+      <p class="project-card__desc" id="proj4Desc">
+        Member of the University of Auckland Rocketry club, working on collaborative
+        rocket design and manufacture — using simulation software to model centre
+        of pressure and gravity and predict flight performance.
+      </p>
+      <ul class="project-card__tags">
+        <li>Fusion</li>
+        <li>OpenRocket</li>
+        <li>Laser Cutting</li>
+      </ul>
+      <a href="https://github.com/jkuw137" target="_blank" rel="noopener" class="project-card__link" id="proj4Link">View project ↗</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__patch">✦</div>
+      <p class="project-card__code" id="proj5Code">JUL 2026 – PRESENT</p>
+      <h3 id="proj5Title">NZ Undergraduate Space Challenge</h3>
+      <p class="project-card__desc" id="proj5Desc">
+        Part of a multidisciplinary team designing a payload module for integration
+        into a 3U CubeSat headed to Low Earth Orbit — working across disciplines
+        to solve real mission constraints.
+      </p>
+      <ul class="project-card__tags">
+        <li>CubeSat</li>
+        <li>Systems Engineering</li>
+        <li>Payload Design</li>
+      </ul>
+      <a href="https://github.com/jkuw137" target="_blank" rel="noopener" class="project-card__link" id="proj5Link">View project ↗</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= SKETCHBOOK (art gallery) ================= -->
+<section class="art" id="art">
+  <div class="section-head">
+    <p class="eyebrow eyebrow--dark" id="artEyebrow">Illustrations</p>
+    <h2 id="artHeading">Sketchbook</h2>
+    <p class="section-sub" id="artSub">I draw as much as I build. This is a space for my own hand-drawn illustrations — no AI-generated images here.</p>
+  </div>
+
+  <!--
+    HOW TO ADD YOUR OWN ARTWORK:
+    1. Put your image files in the assets/art/ folder (e.g. assets/art/piece-01.jpg).
+    2. Replace a <div class="art-slot"> block below with:
+         <figure class="art-piece">
+           <img src="assets/art/piece-01.jpg" alt="Describe the piece">
+           <figcaption>Illustration title — medium, year</figcaption>
+         </figure>
+    3. Duplicate the <figure> block for each additional piece, or keep the
+       placeholder slots for spots you haven't filled yet.
+  -->
+  <div class="art-grid">
+    <div class="art-slot">
+      <span class="art-slot__icon">✦</span>
+      <span class="art-slot__label" id="artSlotLabel1">+ Add your artwork</span>
+      <span class="art-slot__caption" id="artCaption1">Illustration title — medium, year</span>
+    </div>
+    <div class="art-slot">
+      <span class="art-slot__icon">✦</span>
+      <span class="art-slot__label" id="artSlotLabel2">+ Add your artwork</span>
+      <span class="art-slot__caption" id="artCaption2">Illustration title — medium, year</span>
+    </div>
+    <div class="art-slot">
+      <span class="art-slot__icon">✦</span>
+      <span class="art-slot__label" id="artSlotLabel3">+ Add your artwork</span>
+      <span class="art-slot__caption" id="artCaption3">Illustration title — medium, year</span>
+    </div>
+    <div class="art-slot">
+      <span class="art-slot__icon">✦</span>
+      <span class="art-slot__label" id="artSlotLabel4">+ Add your artwork</span>
+      <span class="art-slot__caption" id="artCaption4">Illustration title — medium, year</span>
+    </div>
+    <div class="art-slot">
+      <span class="art-slot__icon">✦</span>
+      <span class="art-slot__label" id="artSlotLabel5">+ Add your artwork</span>
+      <span class="art-slot__caption" id="artCaption5">Illustration title — medium, year</span>
+    </div>
+    <div class="art-slot">
+      <span class="art-slot__icon">✦</span>
+      <span class="art-slot__label" id="artSlotLabel6">+ Add your artwork</span>
+      <span class="art-slot__caption" id="artCaption6">Illustration title — medium, year</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="about__grid">
+    <div class="about__text">
+      <p class="eyebrow eyebrow--dark" id="aboutEyebrow">About</p>
+      <h2 id="aboutHeading">Grounded in mechanics.<br>Reaching for orbit.</h2>
+      <p id="aboutPara1">
+        I'm a mechanical engineering student in Auckland with a habit of chasing
+        anything that flies — go-karts, rockets, CubeSats. I like building things
+        with my hands as much as I like modelling them in CAD, and I try to bring
+        the same care to a hand-drawn illustration as I do to a machined part.
+      </p>
+      <p id="aboutPara2">
+        Currently splitting my time between University of Auckland Rocketry and
+        the NZ Undergraduate Space Challenge, while sketching in whatever hours
+        are left over.
+      </p>
     </div>
 
-    <!-- signature element: dotted trail with a drifting little craft, both
-         living in the same SVG coordinate space so they always line up -->
-    <svg class="orbit-path" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
-      <path id="orbitCurve" d="M -50 220 C 250 60, 650 340, 1250 90" fill="none" stroke="rgba(234,243,255,0.28)" stroke-width="1.5" stroke-dasharray="1 10" stroke-linecap="round"/>
-      <g class="orbit-craft-group">
-        <path d="M-9 -6 L11 0 L-9 6 L-3 0 Z" fill="#EAF3FF" stroke="#8FC1E8" stroke-width="1"/>
-        <animateMotion dur="26s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="linear">
-          <mpath href="#orbitCurve" xlink:href="#orbitCurve"/>
-        </animateMotion>
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="26s" repeatCount="indefinite"/>
-      </g>
-    </svg>
-
-    <div class="hero-horizon" aria-hidden="true">
-      <svg viewBox="0 0 1440 180" preserveAspectRatio="none" width="100%" height="100%">
-        <path d="M0,90 C180,40 320,140 500,100 C680,60 800,150 1000,110 C1180,75 1300,130 1440,95 L1440,180 L0,180 Z" fill="var(--cloud-far)"/>
-        <path d="M0,130 C220,90 380,170 620,130 C820,100 980,175 1200,140 C1320,120 1400,150 1440,135 L1440,180 L0,180 Z" fill="var(--cloud-near)"/>
-      </svg>
-    </div>
-
-    <button class="scroll-cue" id="scrollCue" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-      <span id="scrollCueText"></span>
-      <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 4 L7 10 L12 4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-  </section>
-
-  <!-- ================= ABOUT ================= -->
-  <section class="section section-light" id="about">
-    <div class="wrap about-grid">
-      <div class="about-text">
-        <p class="section-eyebrow" id="aboutEyebrow"></p>
-        <h2 id="aboutHeading"></h2>
-        <p class="about-body" id="aboutBody"></p>
-        <div class="about-facts" id="aboutFacts"></div>
-      </div>
-      <div class="about-portrait" aria-hidden="true">
-        <div class="moon-frame">
-          <svg viewBox="0 0 220 220" width="100%" height="100%">
-            <circle cx="110" cy="110" r="104" fill="var(--moon)"/>
-            <circle cx="80" cy="70" r="14" fill="var(--moon-shadow)" opacity="0.5"/>
-            <circle cx="140" cy="130" r="22" fill="var(--moon-shadow)" opacity="0.4"/>
-            <circle cx="150" cy="60" r="9" fill="var(--moon-shadow)" opacity="0.4"/>
-          </svg>
-          <span class="moon-orbit-dot"></span>
+    <div class="about__toolkit">
+      <p class="toolkit__label" id="toolkitLabel">Toolkit</p>
+      <div class="toolkit__grid">
+        <div class="toolkit__group">
+          <h4 id="toolkitDesignTitle">Design</h4>
+          <p id="toolkitDesignText">Fusion 360, SolidWorks</p>
+        </div>
+        <div class="toolkit__group">
+          <h4 id="toolkitAnalysisTitle">Analysis</h4>
+          <p id="toolkitAnalysisText">OpenRocket, basic FEA</p>
+        </div>
+        <div class="toolkit__group">
+          <h4 id="toolkitFabTitle">Fabrication</h4>
+          <p id="toolkitFabText">Laser cutting, 3D printing, composite lay-up</p>
+        </div>
+        <div class="toolkit__group">
+          <h4 id="toolkitElecTitle">Electronics</h4>
+          <p id="toolkitElecText">Arduino, ESP32, soldering</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ================= PROJECTS ================= -->
-  <section class="section section-dark" id="projects">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="section-eyebrow" id="projectsEyebrow"></p>
-        <h2 id="projectsHeading"></h2>
-        <p class="section-intro" id="projectsIntro"></p>
-      </div>
-      <div class="project-list" id="projectList"></div>
-    </div>
-  </section>
+<!-- ================= MISSION LOG (timeline) ================= -->
+<section class="log" id="log">
+  <div class="section-head">
+    <p class="eyebrow" id="logEyebrow">Mission Log</p>
+    <h2 id="logHeading">How I got here</h2>
+    <p class="section-sub" id="logSub">Projects and milestones, in order.</p>
+  </div>
 
-  <!-- ================= GALLERY ================= -->
-  <section class="section section-light" id="gallery">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="section-eyebrow" id="galleryEyebrow"></p>
-        <h2 id="galleryHeading"></h2>
-        <p class="section-intro" id="galleryIntro"></p>
-      </div>
-      <div class="gallery-grid" id="galleryGrid"></div>
-    </div>
-  </section>
+  <ol class="log__list">
+    <li class="log__entry">
+      <p class="log__date">2026</p>
+      <h3 id="log1Title">NZ Undergraduate Space Challenge</h3>
+      <p id="log1Org">Payload Team</p>
+      <p class="log__detail" id="log1Detail">Designing a payload module for a 3U CubeSat bound for low Earth orbit.</p>
+    </li>
+    <li class="log__entry">
+      <p class="log__date">2026</p>
+      <h3 id="log2Title">University of Auckland Rocketry</h3>
+      <p id="log2Org">Club Member</p>
+      <p class="log__detail" id="log2Detail">Simulating rocket flight performance and contributing to design and manufacture.</p>
+    </li>
+    <li class="log__entry">
+      <p class="log__date">2026</p>
+      <h3 id="log3Title">Mini-Warman Competition</h3>
+      <p id="log3Org">Team Member</p>
+      <p class="log__detail" id="log3Detail">Designed gear trains and arm mechanisms for an autonomous ball-handling robot.</p>
+    </li>
+    <li class="log__entry">
+      <p class="log__date">2026</p>
+      <h3 id="log4Title">Custom Shortcut Controller</h3>
+      <p id="log4Org">Personal Project</p>
+      <p class="log__detail" id="log4Detail">Designed a custom ESP32 HID with programmable macros to improve digital art workflow.</p>
+    </li>
+    <li class="log__entry">
+      <p class="log__date">2024</p>
+      <h3 id="log5Title">Electric Go-Kart — Composite Chassis</h3>
+      <p id="log5Org">EVolocity Team</p>
+      <p class="log__detail" id="log5Detail">Helped manufacture a full carbon-fiber chassis rated for an 80kg+ driver load.</p>
+    </li>
+    <li class="log__entry">
+      <p class="log__date">20XX</p>
+      <h3 id="log6Title">Started Engineering Degree</h3>
+      <p id="log6Org">University of Auckland</p>
+      <p class="log__detail" id="log6Detail">Add the year you started, and anything else worth noting.</p>
+    </li>
+  </ol>
+</section>
 
-  <!-- ================= CONTACT ================= -->
-  <section class="section section-void" id="contact">
-    <div class="wrap contact-wrap">
-      <p class="section-eyebrow" id="contactEyebrow"></p>
-      <h2 id="contactHeading"></h2>
-      <p class="section-intro" id="contactIntro"></p>
-      <div class="contact-links" id="contactLinks"></div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span id="footerText"></span>
-    <div class="lang-toggle lang-toggle-footer" role="group" aria-label="Language">
-      <button id="btnEnFooter" type="button">EN</button>
-      <button id="btnJaFooter" type="button">日本語</button>
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="contact__sky" aria-hidden="true"></div>
+  <div class="contact__content">
+    <p class="eyebrow" id="contactEyebrow">Get in touch</p>
+    <h2 id="contactHeading">Send a transmission</h2>
+    <p class="contact__sub" id="contactSub">Open to new projects, roles, and collaborations. I usually reply within a day or two.</p>
+    <!-- TODO: swap in your real email address -->
+    <a href="mailto:joe.kuwano@example.com" class="contact__email">joe.kuwano@example.com</a>
+    <div class="contact__links">
+      <!-- TODO: add your LinkedIn URL -->
+      <a href="#" id="linkedinLink">LinkedIn ↗</a>
+      <a href="https://github.com/jkuw137" target="_blank" rel="noopener" id="githubLink">GitHub ↗</a>
+      <a href="assets/resume/joe-kuwano-resume.pdf" id="resumeLink2" download>Résumé ↗</a>
     </div>
   </div>
-</footer>
+</section>
 
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
-  <img id="lightboxImg" src="" alt="" />
-  <p class="lightbox-caption" id="lightboxCaption"></p>
-</div>
+<footer class="footer">
+  <p id="footerText">✦ Built by Joe Kuwano, somewhere under the same sky as everyone else.</p>
+</footer>
 
 <script src="content.js"></script>
 <script src="script.js"></script>

@@ -1,227 +1,271 @@
-/* =====================================================================
-   CONTENT.JS
-   ---------------------------------------------------------------------
-   This is the ONLY file you need to edit to change anything on the
-   site: headings, bio, projects, gallery images, and contact links —
-   in both English (en) and Japanese (ja).
+/*
+  ================================================================
+  ✦ SITE CONTENT — edit this file to change any text on the site.
+  ================================================================
 
-   Every piece of text is written as  { en: "...", ja: "..." }
-   Edit the value inside the quotes, save, and refresh the page.
-   No build step, nothing to install.
+  How it works:
+  - Every key below matches an "id" in index.html (e.g. "heroTitle"
+    matches <h1 id="heroTitle">).
+  - There are two blocks: `en` (English) and `ja` (Japanese).
+  - Edit the text on the right of each colon. Keep the quote marks.
+  - A few entries contain HTML (like <span> or <br>) — that's normal,
+    it's marked in the HTML_KEYS list further down. Leave the tags
+    in place, just edit the words around them.
+  - Don't rename the keys (the part before the colon) — script.js
+    uses them to find the right element on the page.
+  - After saving, just refresh index.html in your browser to see
+    the change. No build step needed.
 
-   ------------------------------------------------------------------
-   HOW TO ADD YOUR OWN ARTWORK
-   ------------------------------------------------------------------
-   1. Drop your image file into the /assets/art folder
-      (e.g. assets/art/sketch-01.jpg — jpg, png and webp all work).
-   2. Scroll down to `gallery.images` near the bottom of this file
-      and add a line like:
-          { src: "assets/art/sketch-01.jpg", caption: { en: "Title", ja: "タイトル" } }
-   3. Save and refresh. That's it — the gallery grid and the lightbox
-      pop-up update automatically.
-   The gallery starts empty on purpose, with a friendly placeholder,
-   so the site looks complete before you've added anything.
-
-   You can do the same thing for a project thumbnail — just set the
-   project's `image` field to a path in /assets/art.
-   ===================================================================== */
+  To add a brand new translatable element later: give it an id in
+  index.html, then add that same id as a key in BOTH blocks below.
+*/
 
 const SITE_CONTENT = {
+  en: {
+    // Nav
+    navWork: "Work",
+    navArt: "Sketchbook",
+    navAbout: "About",
+    navLog: "Mission Log",
+    navContact: "Contact",
+    langToggle: "日本語",
+    navCta: "Say hello",
 
-  meta: {
-    name: "Joe Kuwano",
-    siteTitle: { en: "Joe Kuwano — Engineering Portfolio", ja: "Joe Kuwano — エンジニアリング・ポートフォリオ" },
+    // Hero
+    heroEyebrow: "Mechanical Engineer · Aerospace Enthusiast",
+    heroTitle: `Hi, I'm <span class="hero__name">Joe Kuwano.</span><br>
+      I build hardware<br> that likes to fly.`,
+    heroSub: "From motor mounts to full flight stacks — I design, prototype, and test mechanical systems, with a soft spot for anything that leaves the ground.",
+    btnWork: "See my work",
+    resumeLink: "Download résumé",
+
+    // Work section
+    workEyebrow: "Selected Work",
+    workHeading: "Projects I've launched",
+    workSub: "A few things I've designed, built, and tested — from student competition teams to university research groups.",
+
+    proj1Code: "JAN 2026 – MAY 2026",
+    proj1Title: "Custom Shortcut Controller",
+    proj1Desc: "Prototyped a custom ESP32-based HID to speed up digital art workflows and reduce hand strain, with fully custom firmware and an ergonomic enclosure.",
+    proj1Link: "View project ↗",
+
+    proj2Code: "MAR 2024 – NOV 2024",
+    proj2Title: "Electric Go-Kart — Composite Chassis",
+    proj2Desc: "Helped design and manufacture a full carbon-fiber chassis for an EVolocity competition entry — wet lay-up, vacuum bagging, and mould fabrication, built to carry a full 80kg+ driver load.",
+    proj2Link: "View project ↗",
+
+    proj3Code: "MAR 2026 – JUN 2026",
+    proj3Title: "Mini-Warman Competition",
+    proj3Desc: "Collaborated on an autonomous system to collect, transport, and deposit tennis balls — designing gear trains and arm mechanisms for torque and control, applying Design-for-Production principles for reliable assembly.",
+    proj3Link: "View project ↗",
+
+    proj4Code: "MAR 2026 – PRESENT",
+    proj4Title: "University of Auckland Rocketry",
+    proj4Desc: "Member of the University of Auckland Rocketry club, working on collaborative rocket design and manufacture — using simulation software to model centre of pressure and gravity and predict flight performance.",
+    proj4Link: "View project ↗",
+
+    proj5Code: "JUL 2026 – PRESENT",
+    proj5Title: "NZ Undergraduate Space Challenge",
+    proj5Desc: "Part of a multidisciplinary team designing a payload module for integration into a 3U CubeSat headed to Low Earth Orbit — working across disciplines to solve real mission constraints.",
+    proj5Link: "View project ↗",
+
+    // Sketchbook / art
+    artEyebrow: "Illustrations",
+    artHeading: "Sketchbook",
+    artSub: "I draw as much as I build. This is a space for my own hand-drawn illustrations — no AI-generated images here.",
+    artSlotLabel1: "+ Add your artwork",
+    artCaption1: "Illustration title — medium, year",
+    artSlotLabel2: "+ Add your artwork",
+    artCaption2: "Illustration title — medium, year",
+    artSlotLabel3: "+ Add your artwork",
+    artCaption3: "Illustration title — medium, year",
+    artSlotLabel4: "+ Add your artwork",
+    artCaption4: "Illustration title — medium, year",
+    artSlotLabel5: "+ Add your artwork",
+    artCaption5: "Illustration title — medium, year",
+    artSlotLabel6: "+ Add your artwork",
+    artCaption6: "Illustration title — medium, year",
+
+    // About
+    aboutEyebrow: "About",
+    aboutHeading: "Grounded in mechanics.<br>Reaching for orbit.",
+    aboutPara1: "I'm a mechanical engineering student in Auckland with a habit of chasing anything that flies — go-karts, rockets, CubeSats. I like building things with my hands as much as I like modelling them in CAD, and I try to bring the same care to a hand-drawn illustration as I do to a machined part.",
+    aboutPara2: "Currently splitting my time between University of Auckland Rocketry and the NZ Undergraduate Space Challenge, while sketching in whatever hours are left over.",
+    toolkitLabel: "Toolkit",
+    toolkitDesignTitle: "Design",
+    toolkitDesignText: "Fusion 360, SolidWorks",
+    toolkitAnalysisTitle: "Analysis",
+    toolkitAnalysisText: "OpenRocket, basic FEA",
+    toolkitFabTitle: "Fabrication",
+    toolkitFabText: "Laser cutting, 3D printing, composite lay-up",
+    toolkitElecTitle: "Electronics",
+    toolkitElecText: "Arduino, ESP32, soldering",
+
+    // Mission log
+    logEyebrow: "Mission Log",
+    logHeading: "How I got here",
+    logSub: "Projects and milestones, in order.",
+
+    log1Title: "NZ Undergraduate Space Challenge",
+    log1Org: "Payload Team",
+    log1Detail: "Designing a payload module for a 3U CubeSat bound for low Earth orbit.",
+
+    log2Title: "University of Auckland Rocketry",
+    log2Org: "Club Member",
+    log2Detail: "Simulating rocket flight performance and contributing to design and manufacture.",
+
+    log3Title: "Mini-Warman Competition",
+    log3Org: "Team Member",
+    log3Detail: "Designed gear trains and arm mechanisms for an autonomous ball-handling robot.",
+
+    log4Title: "Custom Shortcut Controller",
+    log4Org: "Personal Project",
+    log4Detail: "Designed a custom ESP32 HID with programmable macros to improve digital art workflow.",
+
+    log5Title: "Electric Go-Kart — Composite Chassis",
+    log5Org: "EVolocity Team",
+    log5Detail: "Helped manufacture a full carbon-fiber chassis rated for an 80kg+ driver load.",
+
+    log6Title: "Started Engineering Degree",
+    log6Org: "University of Auckland",
+    log6Detail: "Add the year you started, and anything else worth noting.",
+
+    // Contact
+    contactEyebrow: "Get in touch",
+    contactHeading: "Send a transmission",
+    contactSub: "Open to new projects, roles, and collaborations. I usually reply within a day or two.",
+    linkedinLink: "LinkedIn ↗",
+    githubLink: "GitHub ↗",
+    resumeLink2: "Résumé ↗",
+
+    // Footer
+    footerText: "✦ Built by Joe Kuwano, somewhere under the same sky as everyone else.",
   },
 
-  nav: {
-    about:    { en: "About",    ja: "概要" },
-    projects: { en: "Projects", ja: "プロジェクト" },
-    gallery:  { en: "Gallery",  ja: "ギャラリー" },
-    contact:  { en: "Contact",  ja: "連絡先" },
-  },
+  ja: {
+    // Nav
+    navWork: "実績",
+    navArt: "スケッチブック",
+    navAbout: "プロフィール",
+    navLog: "ミッションログ",
+    navContact: "お問い合わせ",
+    langToggle: "English",
+    navCta: "連絡する",
 
-  hero: {
-    eyebrow:  { en: "Engineering Portfolio", ja: "エンジニアリング・ポートフォリオ" },
-    tagline:  {
-      en: "Mechanical design and embedded electronics, built with a soft spot for rockets, small satellites, and the odd hand-drawn sketch.",
-      ja: "機械設計と組み込み電子回路を軸に活動しています。ロケットや小型衛星、そして時々の手描きスケッチも好きです。",
-    },
-    ctaProjects: { en: "See the projects", ja: "プロジェクトを見る" },
-    ctaGallery:  { en: "See the art",      ja: "イラストを見る" },
-    scrollCue:   { en: "Scroll",           ja: "スクロール" },
-  },
+    // Hero
+    heroEyebrow: "機械工学専攻 · 航空宇宙が好きです",
+    heroTitle: `はじめまして、<span class="hero__name">Joe Kuwano</span>です。<br>
+      空へ向かう<br>ハードウェアをつくっています。`,
+    heroSub: "モーターマウントから統合フライトシステムまで—機械システムの設計・試作・試験を行っています。地上を離れるものには、特別な思い入れがあります。",
+    btnWork: "実績を見る",
+    resumeLink: "履歴書をダウンロード",
 
-  about: {
-    eyebrow: { en: "About", ja: "About" },
-    heading: { en: "A little about me", ja: "自己紹介" },
-    body: {
-      en: "I'm an engineering student based in Auckland, New Zealand, with a particular interest in mechanical design, composite manufacturing, and embedded electronics. Most of what I build sits somewhere between CAD and the workshop bench — laser cutting, 3D printing, soldering, firmware — and I like following a project from an early sketch through to something that actually works. Space and aerospace projects are what pulled me toward engineering in the first place, and they're still what I enjoy working on most. Outside of that, I draw — you'll find some of it in the gallery below.",
-      ja: "ニュージーランド・オークランドを拠点に工学を学んでいます。特に機械設計、複合材製造、組み込み電子回路に関心があります。手掛けるものの多くはCAD設計と実際の工作の両方にまたがっており、レーザーカット、3Dプリント、はんだ付け、ファームウェア開発など、初期のスケッチから実際に動くものへ仕上げていく過程が好きです。もともと宇宙・航空宇宙分野への関心が工学を志すきっかけであり、今でも一番楽しんで取り組んでいる分野です。工学以外では絵を描くことも好きで、その一部を下のギャラリーに掲載しています。",
-    },
-    facts: [
-      { en: "Auckland, New Zealand", ja: "ニュージーランド・オークランド" },
-      { en: "Mechanical & Embedded Systems", ja: "機械工学・組み込みシステム" },
-      { en: "University of Auckland", ja: "オークランド大学" },
-    ],
-  },
+    // Work section
+    workEyebrow: "主な実績",
+    workHeading: "取り組んできたプロジェクト",
+    workSub: "学生コンペティションチームから大学の研究グループまで、これまでに設計・製作・試験してきたプロジェクトの一部です。",
 
-  projects: {
-    eyebrow: { en: "Projects", ja: "Projects" },
-    heading: { en: "Things I've built", ja: "手がけたプロジェクト" },
-    intro: {
-      en: "A mix of coursework, competition teams, and personal builds — spanning CAD design, composite manufacturing, embedded electronics, and rocketry.",
-      ja: "授業課題、競技チームでの活動、個人制作など様々です。CAD設計、複合材製造、組み込み電子回路、ロケット工学に及びます。",
-    },
-    featuredTag: { en: "Featured", ja: "注目" },
-    linkLabel:   { en: "View project ↗", ja: "プロジェクトを見る ↗" },
-    profileLabel:{ en: "View on GitHub ↗", ja: "GitHubで見る ↗" },
+    proj1Code: "2026年1月 – 2026年5月",
+    proj1Title: "カスタムショートカットコントローラー",
+    proj1Desc: "デジタルアートの制作を効率化し、手への負担を減らすため、ESP32を用いたカスタムHIDデバイスを試作しました。ファームウェアと人間工学に基づいた筐体はすべて自作です。",
+    proj1Link: "プロジェクトを見る ↗",
 
-    // ---- Add or edit projects here. Copy an object below to add one. ----
-    list: [
-      {
-        id: "shortcut-controller",
-        featured: true,
-        title: { en: "Custom Shortcut Controller", ja: "カスタム・ショートカット・コントローラー" },
-        date:  { en: "January 2026 – May 2026", ja: "2026年1月 – 2026年5月" },
-        tech: ["Fusion", "Arduino IDE", "3D Printing", "ESP32", "Soldering & Electronics"],
-        link: "https://github.com/jkuw137/Custom-ESP-32-HID-Device",
-        linkType: "repo",
-        image: null, // e.g. "assets/art/shortcut-controller.jpg"
-        bullets: {
-          en: [
-            "Prototyped a custom human interface device to speed up digital art workflows and reduce hand strain during long sessions.",
-            "Designed and iterated an ergonomic electronics enclosure across several print revisions.",
-            "Evaluated design constraints such as tolerancing and material limitations.",
-            "Built hardware and firmware to support programmable macros and custom device inputs.",
-          ],
-          ja: [
-            "デジタルアート制作の作業効率向上と、長時間作業による手への負担軽減を目的に、専用のヒューマンインターフェースデバイスを試作。",
-            "人間工学に基づいた電子部品用エンクロージャを設計し、複数回の3Dプリント試作を通じて改良を重ねた。",
-            "寸法公差や素材の制約といった設計条件を検討・評価。",
-            "プログラム可能なマクロやカスタム入力に対応するハードウェアとファームウェアを開発。",
-          ],
-        },
-      },
-      {
-        id: "go-kart-chassis",
-        featured: false,
-        title: { en: "Electric Go-Kart Composite Chassis", ja: "電動ゴーカート用コンポジット・シャシー" },
-        date:  { en: "March 2024 – November 2024", ja: "2024年3月 – 2024年11月" },
-        tech: ["Fusion", "Laser Cutting", "Composite Manufacturing"],
-        link: "https://github.com/jkuw137",
-        linkType: "profile",
-        image: null,
-        bullets: {
-          en: [
-            "Contributed to the design and manufacture of a full carbon-fibre chassis as part of an EVolocity competition team.",
-            "Gained hands-on exposure to composite manufacturing processes, including wet lay-up, vacuum bagging, and mould fabrication.",
-            "Helped deliver a lightweight, structurally robust frame capable of supporting a full driver load of over 80 kg.",
-          ],
-          ja: [
-            "EVolocity大会に出場するチームの一員として、フルカーボンファイバー製シャシーの設計・製作に携わる。",
-            "ウェットレイアップ、真空バギング、型製作など、複合材製造プロセスを実地で経験。",
-            "80kgを超えるドライバー荷重に対応できる、軽量かつ構造的に堅牢なフレームの実現に貢献。",
-          ],
-        },
-      },
-      {
-        id: "mini-warman",
-        featured: false,
-        title: { en: "Mini-Warman Competition", ja: "Mini-Warman 大会" },
-        date:  { en: "March 2026 – June 2026", ja: "2026年3月 – 2026年6月" },
-        tech: ["Fusion", "Arduino", "3D Printing", "Laser Cutting", "Electronics"],
-        link: "https://github.com/jkuw137",
-        linkType: "profile",
-        image: null,
-        bullets: {
-          en: [
-            "Collaborated on an autonomous system for collecting, transporting, and depositing tennis balls as part of a team.",
-            "Conducted analyses to design gear trains and arm mechanisms for improved torque and control.",
-            "Applied Design for Production principles to support fast design iteration and reliable assembly.",
-          ],
-          ja: [
-            "テニスボールの収集・運搬・排出を行う自律システムの開発に、チームの一員として取り組んだ。",
-            "トルクと制御性の向上に向けて、ギア機構やアーム機構の解析・設計を実施。",
-            "Design for Production(DfP)の考え方を適用し、迅速な設計反復と組立の信頼性向上を両立。",
-          ],
-        },
-      },
-      {
-        id: "rocketry",
-        featured: false,
-        title: { en: "University of Auckland Rocketry", ja: "オークランド大学ロケット部" },
-        date:  { en: "March 2026 – Present", ja: "2026年3月 – 現在" },
-        tech: ["Fusion", "OpenRocket", "Laser Cutting", "Manufacturing"],
-        link: "https://github.com/jkuw137",
-        linkType: "profile",
-        image: null,
-        bullets: {
-          en: [
-            "Member of the University of Auckland Rocketry Club, participating in collaborative projects and technical workshops focused on rocket design and manufacture.",
-            "Used simulation software to model a rocket's centre of pressure and centre of gravity to predict flight performance.",
-          ],
-          ja: [
-            "オークランド大学ロケット部の一員として、ロケットの設計・製作に関する共同プロジェクトや技術ワークショップに参加。",
-            "シミュレーションソフトウェアを用いてロケットの圧力中心・重心を解析し、飛行性能を予測。",
-          ],
-        },
-      },
-      {
-        id: "space-challenge",
-        featured: false,
-        title: { en: "NZ Undergraduate Space Challenge", ja: "NZ Undergraduate Space Challenge" },
-        date:  { en: "July 2026 – Present", ja: "2026年7月 – 現在" },
-        tech: ["Systems Engineering", "CubeSat Payload"],
-        link: "https://github.com/jkuw137",
-        linkType: "profile",
-        image: null,
-        bullets: {
-          en: [
-            "Member of a multidisciplinary team designing a payload module for integration into a 3U CubeSat to be launched into low Earth orbit.",
-            "Collaborating across multiple disciplines to develop practical solutions for a real-world space mission.",
-          ],
-          ja: [
-            "低軌道(LEO)へ打ち上げ予定の3U CubeSatに搭載するペイロードモジュールの設計を、学際的なチームの一員として担当。",
-            "複数分野のメンバーと連携し、実際の宇宙ミッションに向けた実用的な解決策の検討に取り組んでいる。",
-          ],
-        },
-      },
-    ],
-  },
+    proj2Code: "2024年3月 – 2024年11月",
+    proj2Title: "電動ゴーカート — カーボンコンポジットシャシー",
+    proj2Desc: "EVolocityコンペティション出場車両のフルカーボンファイバーシャシーの設計・製作に携わりました。ウェットレイアップ、真空バッギング、型製作を経験し、80kg以上のドライバー荷重に耐える軽量かつ堅牢なフレームを完成させました。",
+    proj2Link: "プロジェクトを見る ↗",
 
-  gallery: {
-    eyebrow: { en: "Gallery", ja: "Gallery" },
-    heading: { en: "Sketchbook", ja: "スケッチブック" },
-    intro: {
-      en: "Original illustration and digital art — all hand-drawn by me, nothing AI-generated.",
-      ja: "オリジナルのイラスト・デジタルアート作品です。すべて自分の手で描いたもので、AI生成の画像は使用していません。",
-    },
-    emptyTitle: { en: "Artwork coming soon", ja: "近日公開" },
-    emptyBody: {
-      en: "This space is reserved for hand-drawn illustration. Add image files to /assets/art and list them in content.js to have them appear here.",
-      ja: "この欄には手描きのイラストを掲載する予定です。/assets/art に画像を追加し、content.js に記載すると表示されます。",
-    },
+    proj3Code: "2026年3月 – 2026年6月",
+    proj3Title: "Mini-Warman競技会",
+    proj3Desc: "テニスボールを収集・運搬・排出する自律システムをチームで開発しました。トルクと制御性を高めるためのギアトレインとアーム機構を設計し、確実な組み立てを実現するためDesign for Production(DfP)の原則を適用しました。",
+    proj3Link: "プロジェクトを見る ↗",
 
-    // ---- Add your artwork here, e.g.: ----
-    // { src: "assets/art/piece-01.jpg", caption: { en: "Title of the piece", ja: "作品タイトル" } },
-    images: [],
-  },
+    proj4Code: "2026年3月 – 現在",
+    proj4Title: "オークランド大学ロケットリー部",
+    proj4Desc: "オークランド大学ロケットリー部のメンバーとして、ロケットの共同設計・製作に取り組んでいます。シミュレーションソフトウェアを用いて圧力中心と重心をモデル化し、飛行性能を予測しています。",
+    proj4Link: "プロジェクトを見る ↗",
 
-  contact: {
-    eyebrow: { en: "Contact", ja: "Contact" },
-    heading: { en: "Get in touch", ja: "お問い合わせ" },
-    intro: {
-      en: "Feel free to reach out, or take a look at more of my work on GitHub.",
-      ja: "お気軽にご連絡ください。GitHubでも他のプロジェクトをご覧いただけます。",
-    },
-    githubLabel: { en: "GitHub", ja: "GitHub" },
-    githubUrl: "https://github.com/jkuw137",
-    emailLabel: { en: "Email", ja: "メール" },
-    // EDIT ME — replace with your real email address
-    email: "joe.kuwano@gmail.com",
-  },
+    proj5Code: "2026年7月 – 現在",
+    proj5Title: "NZ Undergraduate Space Challenge",
+    proj5Desc: "低軌道(LEO)へ打ち上げられる3U CubeSatに搭載するペイロードモジュールの設計に、多分野混成チームの一員として取り組んでいます。分野を超えて連携し、実際のミッション制約に対する解決策を模索しています。",
+    proj5Link: "プロジェクトを見る ↗",
 
-  footer: {
-    text: { en: "Built by Joe Kuwano.", ja: "Joe Kuwano 制作。" },
+    // Sketchbook / art
+    artEyebrow: "イラスト",
+    artHeading: "スケッチブック",
+    artSub: "ものづくりと同じくらい、絵を描くことも好きです。ここに並ぶのはすべて自分の手で描いたイラストで、AI生成画像は使用していません。",
+    artSlotLabel1: "+ 作品を追加",
+    artCaption1: "作品タイトル — 画材、制作年",
+    artSlotLabel2: "+ 作品を追加",
+    artCaption2: "作品タイトル — 画材、制作年",
+    artSlotLabel3: "+ 作品を追加",
+    artCaption3: "作品タイトル — 画材、制作年",
+    artSlotLabel4: "+ 作品を追加",
+    artCaption4: "作品タイトル — 画材、制作年",
+    artSlotLabel5: "+ 作品を追加",
+    artCaption5: "作品タイトル — 画材、制作年",
+    artSlotLabel6: "+ 作品を追加",
+    artCaption6: "作品タイトル — 画材、制作年",
+
+    // About
+    aboutEyebrow: "プロフィール",
+    aboutHeading: "機構工学に軸足を置き、<br>軌道を目指す。",
+    aboutPara1: "オークランドで機械工学を学ぶ学生で、飛ぶものならなんでも追いかけてしまう性分です—ゴーカート、ロケット、CubeSatまで。CADでモデリングするのと同じくらい、自分の手で何かをつくることが好きで、機械部品をつくるときと同じ丁寧さを、手描きのイラストにも注いでいます。",
+    aboutPara2: "現在はUniversity of Auckland RocketryとNZ Undergraduate Space Challengeの両方に取り組みながら、残った時間でスケッチを描いています。",
+    toolkitLabel: "使用ツール",
+    toolkitDesignTitle: "設計",
+    toolkitDesignText: "Fusion 360, SolidWorks",
+    toolkitAnalysisTitle: "解析",
+    toolkitAnalysisText: "OpenRocket, 基礎的なFEA",
+    toolkitFabTitle: "製作",
+    toolkitFabText: "レーザーカット、3Dプリント、複合材レイアップ",
+    toolkitElecTitle: "電子工作",
+    toolkitElecText: "Arduino, ESP32, はんだ付け",
+
+    // Mission log
+    logEyebrow: "ミッションログ",
+    logHeading: "これまでの歩み",
+    logSub: "プロジェクトとマイルストーンを時系列で紹介します。",
+
+    log1Title: "NZ Undergraduate Space Challenge",
+    log1Org: "ペイロードチーム",
+    log1Detail: "低軌道へ打ち上げられる3U CubeSat用のペイロードモジュールを設計しています。",
+
+    log2Title: "オークランド大学ロケットリー部",
+    log2Org: "部員",
+    log2Detail: "ロケットの飛行性能をシミュレーションし、設計・製作に貢献しています。",
+
+    log3Title: "Mini-Warman競技会",
+    log3Org: "チームメンバー",
+    log3Detail: "ボールを扱う自律ロボットのギアトレインとアーム機構を設計しました。",
+
+    log4Title: "カスタムショートカットコントローラー",
+    log4Org: "個人プロジェクト",
+    log4Detail: "デジタルアート制作を効率化する、プログラム可能なマクロ機能付きのESP32 HIDを設計しました。",
+
+    log5Title: "電動ゴーカート — カーボンコンポジットシャシー",
+    log5Org: "EVolocityチーム",
+    log5Detail: "80kg以上のドライバー荷重に対応するフルカーボンファイバーシャシーの製作に携わりました。",
+
+    log6Title: "工学部に入学",
+    log6Org: "オークランド大学",
+    log6Detail: "入学年やその他の情報をここに追加してください。",
+
+    // Contact
+    contactEyebrow: "お問い合わせ",
+    contactHeading: "メッセージを送る",
+    contactSub: "新しいプロジェクトやお仕事のご相談、コラボレーションを歓迎します。通常1〜2日以内に返信いたします。",
+    linkedinLink: "LinkedIn ↗",
+    githubLink: "GitHub ↗",
+    resumeLink2: "履歴書 ↗",
+
+    // Footer
+    footerText: "✦ Joe Kuwanoが、みんなと同じ空の下でつくりました。",
   },
 };
+
+// Keys whose value contains HTML tags (like <span> or <br>) rather than
+// plain text. script.js uses this list to know which elements should be
+// filled with innerHTML instead of textContent. Add a key here if you
+// ever put HTML inside a new content string.
+const HTML_CONTENT_KEYS = ["heroTitle", "aboutHeading"];
