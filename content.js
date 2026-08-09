@@ -41,8 +41,8 @@ const SITE_CONTENT = {
 
     // Work section
     workEyebrow: "Selected Work",
-    workHeading: "Projects I've launched",
-    workSub: "A few things I've designed, built, and tested — from student competition teams to university research groups.",
+    workHeading: "Projects:",
+    workSub: "A few things I've designed, built, and tested — from student competition teams to university projects.",
 
     proj1Code: "JAN 2026 – MAY 2026",
     proj1Title: "Custom Shortcut Controller",
