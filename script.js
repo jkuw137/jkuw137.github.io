@@ -94,8 +94,6 @@
 
   /* ---------------- Hero starfield ---------------- */
 
- /* ---------------- Hero starfield ---------------- */
-
     var canvas = document.getElementById("sky");
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     
@@ -265,7 +263,6 @@
     
       requestAnimationFrame(draw);
     }
-  }
 
   /* ---------------- Scroll reveal ---------------- */
 
