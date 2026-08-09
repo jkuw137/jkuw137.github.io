@@ -209,11 +209,17 @@
   <div class="art-grid">
     <div class="art-slot">
       <figure class="art-piece">
-           <a href="assets/art/ocean.png" target="_blank">
-              <img src="assets/art/ocean.png" alt="Digital art produced with the help of my ESP-32 Controller">
-           </a>
-           <figcaption>Port Town, 2026</figcaption>
-         </figure>
+            <img 
+              src="assets/art/ocean.png" 
+              alt="Digital art produced with the help of my ESP-32 Controller"
+              onclick="openLightbox(this)"
+            >
+            <figcaption>Port Town, 2026</figcaption>
+          </figure>
+      
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+          <img id="lightbox-img" src="" alt="">
+        </div>
     </div>
     <div class="art-slot">
       <span class="art-slot__icon">✦</span>
