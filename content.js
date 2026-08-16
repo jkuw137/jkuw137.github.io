@@ -88,7 +88,7 @@ const SITE_CONTENT = {
 
     // About
     aboutEyebrow: "About",
-    aboutHeading: "Grounded in mechanics.<br>Reaching for orbit.",
+    aboutHeading: "Student Mechanical Engineer.<br>.",
     aboutPara1: "I am a second-year mechanical engineering student at the University of Auckland with a strong foundation in problem-solving, teamwork, and technical skills with experience in mechanical design, manufacture, electronics and hardware.",
     aboutPara2: "Currently splitting my time between University of Auckland Rocketry and the NZ Undergraduate Space Challenge, while sketching in whatever hours are left over.",
     toolkitLabel: "Toolkit",
